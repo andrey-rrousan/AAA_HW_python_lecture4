@@ -1,0 +1,31 @@
+INPUT:
+python -m pytest -v what_is_year_now.py
+
+OUTPUT:
+===================================== test session starts =====================================
+platform win32 -- Python 3.9.7, pytest-7.1.3, pluggy-1.0.0 -- D:\Programms\Python\base\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Programms\Jupyter\AAA\Python\Testing\issue-5
+plugins: cov-4.0.0
+collected 3 items
+
+what_is_year_now.py::test_ymd PASSED                                                     [ 33%] 
+what_is_year_now.py::test_dmy PASSED                                                     [ 66%] 
+what_is_year_now.py::test_invalid PASSED                                                 [100%] 
+
+====================================== 3 passed in 0.08s ======================================
+
+INPUT:
+python -m pytest -q what_is_year_now.py --cov
+
+OUTPUT:
+...                                                                                      [100%]
+
+----------- coverage: platform win32, python 3.9.7-final-0 -----------
+Name                  Stmts   Miss  Cover
+-----------------------------------------
+what_is_year_now.py      37      0   100%
+-----------------------------------------
+TOTAL                    37      0   100%
+
+3 passed in 0.15s

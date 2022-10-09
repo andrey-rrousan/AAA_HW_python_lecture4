@@ -1,0 +1,13 @@
+INPUT:
+python -m unittest -v one_hot_encoder.py
+
+OUTPUT:
+test_copies (one_hot_encoder.TestEncoder) ... ok
+test_exception (one_hot_encoder.TestEncoder) ... ok
+test_null (one_hot_encoder.TestEncoder) ... ok
+test_pasta (one_hot_encoder.TestEncoder) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK

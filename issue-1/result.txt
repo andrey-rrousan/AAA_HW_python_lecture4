@@ -1,0 +1,81 @@
+INPUT:
+python -m doctest -o NORMALIZE_WHITESPACE -v morse.py
+
+OUTPUT:
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('A LONG LONG TEXT MESSAGE I WANT TO WRITE') # doctest: +ELLIPSIS
+Expecting:
+    '.-   .-.. --- -. --. ... .-- .-. .. - .'
+ok
+Trying:
+    encode('#')
+Expecting:
+    Traceback (most recent call last):
+    KeyError: '#'
+ok
+Trying:
+    encode('123')
+Expecting:
+    '.----
+     ..---
+     ...--'
+ok
+2 items had no tests:
+    morse
+    morse.decode
+1 items passed all tests:
+   4 tests in morse.encode
+4 tests in 3 items.
+4 passed and 0 failed.
+Test passed.
+
+INPUT:
+python -m doctest -v morse.py
+
+OUTPUT:
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('A LONG LONG TEXT MESSAGE I WANT TO WRITE') # doctest: +ELLIPSIS
+Expecting:
+    '.-   .-.. --- -. --. ... .-- .-. .. - .'
+ok
+Trying:
+    encode('#')
+Expecting:
+    Traceback (most recent call last):
+    KeyError: '#'
+ok
+Trying:
+    encode('123')
+Expecting:
+    '.----
+     ..---
+     ...--'
+**********************************************************************
+File "D:\Programms\Jupyter\AAA\Python\Testing\issue-1\morse.py", line 41, in morse.encode       
+Failed example:
+    encode('123')
+Expected:
+    '.----
+     ..---
+     ...--'
+Got:
+    '.---- ..--- ...--'
+2 items had no tests:
+    morse
+    morse.decode
+**********************************************************************
+1 items had failures:
+   1 of   4 in morse.encode
+4 tests in 3 items.
+3 passed and 1 failed.
+***Test Failed*** 1 failures.
